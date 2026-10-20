@@ -1,4 +1,4 @@
-# Aptamind public site
+# Aptamind Marketing
 
 The public, pre-launch marketing application. It is deliberately isolated from the internal API,
 admin app, workflow runtime, and domain packages.
@@ -6,7 +6,7 @@ admin app, workflow runtime, and domain packages.
 ## Local development
 
 ```bash
-pnpm --filter @aptamind/marketing dev
+pnpm dev
 ```
 
 The app runs at `http://127.0.0.1:3001`. In development, the early-access form uses an ephemeral
@@ -34,7 +34,7 @@ no public listing endpoint exists.
 With `WAITLIST_DATABASE_URL` set, export registrations from a trusted shell:
 
 ```bash
-pnpm --filter @aptamind/marketing export:waitlist > early-access.csv
+pnpm export:waitlist > early-access.csv
 ```
 
 The command writes CSV to stdout and never starts a public endpoint. Treat the export as personal
@@ -51,7 +51,7 @@ public deployment.
 
 ## Recommended deployment
 
-Use Vercel for the first release and set the project to this monorepo with `apps/marketing` as the application.
+Use Vercel for the first release and set the project root to this repository.
 Configure the four production variables above for Production and Preview as appropriate. Vercel is the
 lowest-risk target for this Next.js application; Cloudflare deployment should be treated as a separate adapter
 or Vinext migration project rather than an interchangeable build target.
@@ -59,7 +59,7 @@ or Vinext migration project rather than an interchangeable build target.
 Before a release, validate the environment with:
 
 ```bash
-pnpm --filter @aptamind/marketing verify:deployment
+pnpm verify:deployment
 ```
 
 The command rejects non-HTTPS canonical URLs, placeholder contact details or secrets, non-Postgres database

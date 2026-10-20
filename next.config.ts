@@ -10,7 +10,6 @@ const nextConfig: NextConfig = {
   devIndicators: false,
   reactStrictMode: true,
   poweredByHeader: false,
-  turbopack: { root: new URL('../..', import.meta.url).pathname },
   async headers() {
     return [
       {

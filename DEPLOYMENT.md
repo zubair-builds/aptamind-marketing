@@ -22,8 +22,7 @@ not a build-target toggle immediately before launch.
 
 ## Configure Vercel
 
-Create a project from the monorepo and select `apps/marketing` as the application root. Keep source files
-outside the root available so pnpm can resolve the workspace lockfile and the configured Turbopack root.
+Create a project from this repository and use the repository root as the application root.
 
 Set these variables for Production:
 
@@ -39,7 +38,7 @@ Do not set `WAITLIST_STORAGE=memory` in a production or preview deployment.
 Run the deterministic configuration gate in the deployment environment before releasing:
 
 ```bash
-pnpm --filter @aptamind/marketing verify:deployment
+pnpm verify:deployment
 ```
 
 The check requires an HTTPS origin without a path, a PostgreSQL connection URL, a non-placeholder hash key,
@@ -67,6 +66,6 @@ Before attaching the production domain:
 - The public API exposes submission only; it has no listing or export route.
 - Plain IP addresses are not stored. Rate-limit identifiers are HMAC pseudonyms.
 - Expired rate-limit rows are cleaned opportunistically by the application.
-- Export registrations only from a trusted shell with `pnpm --filter @aptamind/marketing export:waitlist`.
+- Export registrations only from a trusted shell with `pnpm export:waitlist`.
 - Add error monitoring after the domain is configured, but do not send form field values or email addresses to
   logs or analytics.
