@@ -1,0 +1,36 @@
+{
+  "name": "@aptamind/marketing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3001 -H 127.0.0.1",
+    "build": "next build",
+    "start": "next start -p 3001 -H 127.0.0.1",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run --config vitest.config.ts",
+    "qa:browser": "tsx e2e/quality-audit.ts",
+    "verify:deployment": "node --import tsx scripts/check-deployment-env.ts",
+    "export:waitlist": "tsx scripts/export-waitlist.ts"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
+    "geist": "^1.8.1",
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^22.19.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "happy-dom": "^20.14.5",
+    "playwright-core": "~1.56.1",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "vitest": "^5.0.2"
+  }
+}
