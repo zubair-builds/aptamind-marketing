@@ -6,6 +6,7 @@
 - **Database:** Neon Postgres, in a dedicated project or branch
 - **DNS:** the Aptamind public domain pointed at the Vercel production project
 - **Runtime:** Next.js Node.js route handler for `/api/early-access`
+- **Analytics:** Vercel Web Analytics (`@vercel/analytics`), enabled in the root layout
 
 This is the lowest-risk first release for the current Next.js application. Cloudflare is viable, but its
 recommended full-stack path is a Vinext deployment or migration. Treat that as a deliberate platform project,
@@ -60,6 +61,8 @@ Before attaching the production domain:
    `/opengraph-image` on the final origin.
 8. Test keyboard navigation, reduced-motion mode, and 360 px, 390 px, 768 px, 1024 px, and 1440 px layouts.
 9. Confirm the custom domain redirects HTTP to HTTPS and the canonical URL uses the same hostname.
+10. Enable Web Analytics in the Vercel project dashboard under **Analytics**. The free tier does not require an
+    additional application secret; data appears after the deployment receives visitors.
 
 ## Operational notes
 

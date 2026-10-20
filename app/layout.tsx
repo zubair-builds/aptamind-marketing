@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import { GeistSans } from 'geist/font/sans';
 import { absoluteUrl, isIndexableDeployment } from '@/lib/site-config';
 import './globals.css';
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           Skip to main content
         </a>
         {children}
+        <Analytics />
       </body>
     </html>
   );
