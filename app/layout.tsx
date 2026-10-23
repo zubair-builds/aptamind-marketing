@@ -1,7 +1,12 @@
 import type { Metadata, Viewport } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import { GeistSans } from 'geist/font/sans';
-import { absoluteUrl, isIndexableDeployment } from '@/lib/site-config';
+import { GoogleAnalytics } from './google-analytics';
+import {
+  absoluteUrl,
+  googleSiteVerification,
+  isIndexableDeployment,
+} from '@/lib/site-config';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -35,6 +40,7 @@ export const metadata: Metadata = {
   robots: isIndexableDeployment
     ? { index: true, follow: true }
     : { index: false, follow: false, noarchive: true, nosnippet: true },
+  verification: googleSiteVerification ? { google: googleSiteVerification } : undefined,
 };
 
 export const viewport: Viewport = {
@@ -53,6 +59,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </a>
         {children}
         <Analytics />
+        <GoogleAnalytics />
       </body>
     </html>
   );

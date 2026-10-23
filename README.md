@@ -23,6 +23,12 @@ Set the following variables for deployment:
 | `WAITLIST_DATABASE_URL`     | Yes      | Neon Postgres connection string for the dedicated waitlist database.   |
 | `WAITLIST_HASH_KEY`         | Yes      | At least 32 characters, used to pseudonymize rate-limit identifiers.   |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | Yes      | Contact address shown in the footer and legal pages.                   |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | No   | Google Analytics 4 measurement ID, such as `G-XXXXXXXXXX`.             |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | No | Google Search Console HTML verification token.                     |
+
+Set the two optional Google variables for the production deployment to enable GA4 traffic measurement and
+Search Console ownership verification. They are intentionally omitted from local and preview deployments
+unless explicitly configured.
 
 Create a dedicated Neon database or branch for the public website, run `database/schema.sql`, and give the
 runtime role access only to the two waitlist tables. Do not reuse Aptamind's internal application database.

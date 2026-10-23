@@ -6,7 +6,7 @@
 - **Database:** Neon Postgres, in a dedicated project or branch
 - **DNS:** the Aptamind public domain pointed at the Vercel production project
 - **Runtime:** Next.js Node.js route handler for `/api/early-access`
-- **Analytics:** Vercel Web Analytics (`@vercel/analytics`), enabled in the root layout
+- **Analytics:** Vercel Web Analytics (`@vercel/analytics`) and optional Google Analytics 4
 
 This is the lowest-risk first release for the current Next.js application. Cloudflare is viable, but its
 recommended full-stack path is a Vinext deployment or migration. Treat that as a deliberate platform project,
@@ -33,6 +33,8 @@ Set these variables for Production:
 | `WAITLIST_DATABASE_URL`     | Dedicated Neon Postgres connection string                     |
 | `WAITLIST_HASH_KEY`         | At least 32 random characters; generate and store as a secret |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | Monitored Aptamind contact/privacy address                    |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 ID, e.g. `G-XXXXXXXXXX` (recommended) |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Search Console HTML verification token (recommended) |
 
 Do not set `WAITLIST_STORAGE=memory` in a production or preview deployment.
 
@@ -59,9 +61,14 @@ Before attaching the production domain:
 6. Submit the same email again and confirm the response remains idempotent.
 7. Verify `/`, `/privacy`, `/terms`, `/robots.txt`, `/sitemap.xml`, `/manifest.webmanifest`, and
    `/opengraph-image` on the final origin.
-8. Test keyboard navigation, reduced-motion mode, and 360 px, 390 px, 768 px, 1024 px, and 1440 px layouts.
-9. Confirm the custom domain redirects HTTP to HTTPS and the canonical URL uses the same hostname.
-10. Enable Web Analytics in the Vercel project dashboard under **Analytics**. The free tier does not require an
+8. In Google Analytics, create a Web data stream for the final HTTPS origin, copy its `G-...` measurement ID
+   into `NEXT_PUBLIC_GA_MEASUREMENT_ID`, redeploy, and confirm Realtime reports a visit.
+9. In Google Search Console, add the final domain property, copy the HTML tag verification token into
+   `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`, redeploy, then verify ownership and submit
+   `https://your-domain.example/sitemap.xml`.
+10. Test keyboard navigation, reduced-motion mode, and 360 px, 390 px, 768 px, 1024 px, and 1440 px layouts.
+11. Confirm the custom domain redirects HTTP to HTTPS and the canonical URL uses the same hostname.
+12. Enable Web Analytics in the Vercel project dashboard under **Analytics**. The free tier does not require an
     additional application secret; data appears after the deployment receives visitors.
 
 ## Operational notes
