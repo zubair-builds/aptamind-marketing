@@ -11,6 +11,15 @@ function parsedUrl(value: string | undefined) {
   }
 }
 
+function getDatabaseUrl(environment: Environment) {
+  return (
+    environment.WAITLIST_DATABASE_URL ||
+    environment.DATABASE_URL ||
+    environment.POSTGRES_URL ||
+    environment.POSTGRES_PRISMA_URL
+  );
+}
+
 export function deploymentConfigurationIssues(environment: Environment) {
   const issues: string[] = [];
   const siteUrl = parsedUrl(environment.PUBLIC_SITE_URL);
@@ -26,9 +35,9 @@ export function deploymentConfigurationIssues(environment: Environment) {
     }
   }
 
-  const databaseUrl = parsedUrl(environment.WAITLIST_DATABASE_URL);
+  const databaseUrl = parsedUrl(getDatabaseUrl(environment));
   if (!databaseUrl || !['postgres:', 'postgresql:'].includes(databaseUrl.protocol)) {
-    issues.push('WAITLIST_DATABASE_URL must be a PostgreSQL connection URL.');
+    issues.push('WAITLIST_DATABASE_URL (or DATABASE_URL / POSTGRES_URL) must be a PostgreSQL connection URL.');
   }
 
   const hashKey = environment.WAITLIST_HASH_KEY ?? '';
