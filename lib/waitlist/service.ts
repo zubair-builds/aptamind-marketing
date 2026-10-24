@@ -111,8 +111,17 @@ const globalForWaitlist = globalThis as typeof globalThis & {
   waitlistMemory?: { store: MemoryWaitlistStore; limiter: MemoryRateLimiter };
 };
 
+function getDatabaseUrl() {
+  return (
+    process.env.WAITLIST_DATABASE_URL ||
+    process.env.DATABASE_URL ||
+    process.env.POSTGRES_URL ||
+    process.env.POSTGRES_PRISMA_URL
+  );
+}
+
 function connectPostgres() {
-  const databaseUrl = process.env.WAITLIST_DATABASE_URL;
+  const databaseUrl = getDatabaseUrl();
   if (!databaseUrl) {
     throw new Error('Early-access storage is not configured.');
   }
