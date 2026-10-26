@@ -19,7 +19,7 @@ export function GoogleAnalytics() {
 
           try {
             const params = new URLSearchParams(window.location.search);
-            if (params.get('ref') === 'app') {
+            if (params.get('ref') === 'cv') {
               gtag('event', 'resume_visit', { method: 'cv' });
             }
           } catch (e) {}
