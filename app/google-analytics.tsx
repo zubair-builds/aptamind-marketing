@@ -16,6 +16,13 @@ export function GoogleAnalytics() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${googleAnalyticsMeasurementId}', { anonymize_ip: true });
+
+          try {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('ref') === 'app') {
+              gtag('event', 'resume_visit', { method: 'cv' });
+            }
+          } catch (e) {}
         `}
       </Script>
     </>
