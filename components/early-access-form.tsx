@@ -89,8 +89,8 @@ export function EarlyAccessForm() {
           ✓
         </span>
         <p className="form-kicker">Request received</p>
-        <h3>Demo request received.</h3>
-        <p>{state.message} We&apos;ll be in touch to schedule a walkthrough.</p>
+        <h3>You&apos;re on the early-access list.</h3>
+        <p>{state.message} We&apos;ll be in touch when there&apos;s a relevant opening.</p>
       </div>
     );
   }
@@ -167,14 +167,14 @@ export function EarlyAccessForm() {
       <label className="consent">
         <input name="marketingConsent" type="checkbox" />
         <span className="custom-checkbox" aria-hidden="true" />
-        <span>Keep me informed about Aptamind product news and updates. Optional.</span>
+        <span>Keep me informed about Aptamind product news and early-access updates. Optional.</span>
       </label>
       <button
         className="button button-light submit-button"
         type="submit"
         disabled={state.status === 'submitting'}
       >
-        {state.status === 'submitting' ? 'Sending request…' : 'Book a Demo'}
+        {state.status === 'submitting' ? 'Sending request…' : 'Request Early Access'}
         {state.status !== 'submitting' && <ArrowIcon />}
       </button>
       <p className="form-note">

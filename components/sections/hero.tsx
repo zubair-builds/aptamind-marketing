@@ -18,7 +18,7 @@ export function Hero() {
           </p>
           <div className="hero-actions">
             <a className="button button-accent" href="#early-access">
-              Book a Demo <ArrowIcon />
+              Request Early Access <ArrowIcon />
             </a>
             <a className="text-link" href="#platform">
               See how it works <span aria-hidden="true">↓</span>
