@@ -124,7 +124,7 @@ function getDatabaseUrl() {
 function connectPostgres() {
   const databaseUrl = getDatabaseUrl();
   if (!databaseUrl) {
-    throw new Error('Early-access storage is not configured.');
+    throw new Error('Demo request storage is not configured.');
   }
   globalForWaitlist.waitlistSql ??= neon(databaseUrl);
   return globalForWaitlist.waitlistSql;

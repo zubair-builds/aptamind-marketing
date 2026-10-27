@@ -66,7 +66,7 @@ headline or actions. Major sections share 112–144px desktop, 104px tablet, and
   start-aligned flow.
 - Workflow cards stretch to equal row heights. The first two use-case visuals align to a shared bottom edge.
 - The trust composition is center-aligned because the evidence card and explanation have comparable visual
-  weight. Early access, FAQ, and footer columns are explicitly start-aligned for predictable scanning.
+  weight. Demo, FAQ, and footer columns are explicitly start-aligned for predictable scanning.
 - The Before and After views remain simultaneously visible. Their structures differ, so a draggable reveal
   would hide context, weaken accessibility, and suggest a pixel-matched transformation that the content does
   not represent.
@@ -89,11 +89,11 @@ The browser audit covers 1440×900, 1024×768, 768×1024, 390×844, and 360×800
 | -------------------- | --------------------------------------------------------------------------------------------------- |
 | Header brand         | Returns to the top of the page                                                                      |
 | Desktop navigation   | Lands flush at Platform, How it works, and Use cases                                                |
-| Header and hero CTAs | Land at Early access                                                                                |
+| Header and hero CTAs | Land at Book a demo                                                                                 |
 | Mobile menu          | Hidden by default; opens, closes, Escape-dismisses, and closes after navigation                     |
 | Explore the Platform | Lands at the product/problem narrative                                                              |
 | Concept preview      | Exposed as an illustrative image; contains no false interactive control                             |
-| Early-access form    | Client and server validation, loading state, inline errors, success focus, consent, and attribution |
+| Demo request form    | Client and server validation, loading state, inline errors, success focus, consent, and attribution |
 | FAQ rows             | Native keyboard-accessible disclosure controls                                                      |
 | Privacy and Terms    | Real routes with canonical metadata and return navigation                                           |
 | Footer links         | Resolve to valid internal routes or sections                                                        |

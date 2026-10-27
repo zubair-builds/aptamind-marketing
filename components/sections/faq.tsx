@@ -7,14 +7,6 @@ const faqs = [
     'Who is it for?',
     'It is for teams whose decisions depend on scattered, changing information: company and sales intelligence, market research, opportunity discovery, and adjacent workflows.',
   ],
-  [
-    'Is Aptamind available today?',
-    'Aptamind is currently available by private demo. Book a walkthrough to see the platform on a real workflow. General access is not yet open.',
-  ],
-  [
-    'How do I book a demo?',
-    'Share the problem you need to solve. We review every request and schedule a demo with teams whose workflows are a strong fit.',
-  ],
 ];
 
 export function FAQ() {
@@ -22,7 +14,6 @@ export function FAQ() {
     <section className="section faq-section">
       <div className="shell faq-shell">
         <div>
-          <p className="section-number">05 / Questions</p>
           <h2>Built around real intelligence work.</h2>
           <p>We&apos;re refining Aptamind with teams that feel the cost of fragmented context every day.</p>
         </div>

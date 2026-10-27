@@ -34,7 +34,7 @@ const validBody = {
 };
 
 function request(body: unknown, headers: Record<string, string> = {}) {
-  return new Request('https://aptamind.test/api/early-access', {
+  return new Request('https://aptamind.test/api/demo', {
     method: 'POST',
     body: typeof body === 'string' ? body : JSON.stringify(body),
     headers: { 'content-type': 'application/json', origin: 'https://aptamind.test', ...headers },
@@ -51,7 +51,7 @@ function dependencies(store = new Store(), limiter = new Limiter()) {
   };
 }
 
-describe('early-access submission', () => {
+describe('demo request submission', () => {
   it('normalizes and stores a valid registration', async () => {
     const deps = dependencies();
     const response = await submitEarlyAccess(request(validBody), deps);
