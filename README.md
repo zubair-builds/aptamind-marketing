@@ -1,6 +1,6 @@
 # Aptamind Marketing
 
-The public marketing application. It is deliberately isolated from the internal API,
+The public, pre-launch marketing application. It is deliberately isolated from the internal API,
 admin app, workflow runtime, and domain packages.
 
 ## Local development
@@ -9,7 +9,7 @@ admin app, workflow runtime, and domain packages.
 pnpm dev
 ```
 
-The app runs at `http://127.0.0.1:3001`. In development, the demo request form uses an ephemeral
+The app runs at `http://127.0.0.1:3001`. In development, the early-access form uses an ephemeral
 in-process store only when `WAITLIST_STORAGE=memory` is explicitly set. This mode is never allowed
 in production. Copy `.env.example` to `.env.local` when testing the complete production data path.
 
@@ -40,7 +40,7 @@ no public listing endpoint exists.
 With `WAITLIST_DATABASE_URL` set, export registrations from a trusted shell:
 
 ```bash
-pnpm export:waitlist > demo-requests.csv
+pnpm export:waitlist > early-access.csv
 ```
 
 The command writes CSV to stdout and never starts a public endpoint. Treat the export as personal

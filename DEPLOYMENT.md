@@ -5,7 +5,7 @@
 - **Hosting:** Vercel
 - **Database:** Neon Postgres, in a dedicated project or branch
 - **DNS:** the Aptamind public domain pointed at the Vercel production project
-- **Runtime:** Next.js Node.js route handler for the demo request form (`/api/early-access`)
+- **Runtime:** Next.js Node.js route handler for `/api/early-access`
 - **Analytics:** Vercel Web Analytics (`@vercel/analytics`) and optional Google Analytics 4
 
 This is the lowest-risk first release for the current Next.js application. Cloudflare is viable, but its
@@ -57,7 +57,7 @@ Before attaching the production domain:
 3. Run `verify:deployment`, then build and run the production bundle with the deployment variables.
 4. Confirm `/api/health` returns `200`; it checks configuration and database connectivity without exposing
    infrastructure details.
-5. Submit one real demo request and confirm the row in Neon.
+5. Submit one real early-access request and confirm the row in Neon.
 6. Submit the same email again and confirm the response remains idempotent.
 7. Verify `/`, `/privacy`, `/terms`, `/robots.txt`, `/sitemap.xml`, `/manifest.webmanifest`, and
    `/opengraph-image` on the final origin.
