@@ -6,22 +6,22 @@ export function EarlyAccess() {
       <div className="shell access-shell">
         <div className="access-copy">
           <p className="eyebrow light-eyebrow">
-            <span /> Early access
+            <span /> Book a demo
           </p>
-          <h2>Bring your hardest intelligence problem.</h2>
+          <h2>See Aptamind on a real intelligence problem.</h2>
           <p>
-            We&apos;re inviting a small group of teams to shape Aptamind around real, high-value research and
-            decision workflows.
+            Book a walkthrough of the platform. We’ll review your workflow and show how Aptamind connects
+            sources, resolves context, and keeps evidence attached.
           </p>
           <div className="access-details">
             <span>
               <i>01</i> Tell us where context breaks down
             </span>
             <span>
-              <i>02</i> Shape the intelligence workflow
+              <i>02</i> We schedule a focused demo
             </span>
             <span>
-              <i>03</i> Join when your use case is a strong fit
+              <i>03</i> Explore fit for a private beta
             </span>
           </div>
         </div>

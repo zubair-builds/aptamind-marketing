@@ -4,7 +4,7 @@ import { contactEmail } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Website terms',
-  description: 'Terms for using the Aptamind pre-launch website.',
+  description: 'Terms for using the Aptamind website.',
   alternates: { canonical: '/terms' },
 };
 
@@ -21,27 +21,27 @@ export default function Terms() {
         <p className="section-number">Terms / Founder review draft</p>
         <h1>Website terms</h1>
         <p className="legal-lede">
-          These terms are a plain-language draft for Aptamind&apos;s pre-launch website. They should be
+          These terms are a plain-language draft for Aptamind&apos;s website. They should be
           reviewed and completed by the founder and legal counsel before public deployment.
         </p>
-        <p className="legal-meta">Last updated: 19 October 2026</p>
+        <p className="legal-meta">Last updated: 27 October 2026</p>
         <h2>About this website</h2>
         <p>
-          This website introduces Aptamind&apos;s product direction and accepts expressions of interest in
-          early access. Aptamind is in development. Concept previews, examples, and descriptions on this
-          website are illustrative and do not promise that a particular feature, integration, access date, or
-          commercial offering will be available.
+          This website introduces Aptamind and accepts requests for a private demo. Aptamind is available by
+          private demo; general access is not yet open. Examples and descriptions on this website illustrate
+          the platform and do not promise that a particular feature, integration, or commercial offering will
+          be generally available.
         </p>
-        <h2>Early-access requests</h2>
+        <h2>Demo requests</h2>
         <p>
           Submitting the form does not create an account, guarantee access, establish a customer relationship,
           or require either party to enter a future agreement. We may contact you to learn more about your use
-          case or invite you to a suitable programme.
+          case or schedule a demo.
         </p>
         <h2>Acceptable use</h2>
         <p>
           Do not interfere with the website, attempt to bypass its safeguards, submit unlawful material, or
-          use automated means to overload the early-access form.
+          use automated means to overload the demo request form.
         </p>
         <h2>Intellectual property</h2>
         <p>
@@ -51,12 +51,12 @@ export default function Terms() {
         </p>
         <h2>No warranties</h2>
         <p>
-          The pre-launch website is provided on an “as available” basis. To the extent permitted by law, no
+          The website is provided on an “as available” basis. To the extent permitted by law, no
           warranty is made that it will always be available, error-free, or suitable for a particular purpose.
         </p>
         <h2>Changes</h2>
         <p>
-          These terms may change as the product and early-access programme develop. A revised date will be
+          These terms may change as the product and demo programme develop. A revised date will be
           shown on this page.
         </p>
         <h2>Contact</h2>

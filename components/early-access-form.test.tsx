@@ -16,7 +16,7 @@ describe('EarlyAccessForm', () => {
     render(<EarlyAccessForm />);
 
     fireEvent.change(screen.getByLabelText(/work email/i), { target: { value: 'not-an-email' } });
-    fireEvent.click(screen.getByRole('button', { name: /request early access/i }));
+    fireEvent.click(screen.getByRole('button', { name: /book a demo/i }));
 
     expect(screen.getByText('Enter a valid email address.')).toBeTruthy();
     expect(request).not.toHaveBeenCalled();
@@ -33,11 +33,11 @@ describe('EarlyAccessForm', () => {
     render(<EarlyAccessForm />);
 
     fireEvent.change(screen.getByLabelText(/work email/i), { target: { value: 'person@example.com' } });
-    fireEvent.click(screen.getByRole('button', { name: /request early access/i }));
+    fireEvent.click(screen.getByRole('button', { name: /book a demo/i }));
 
     const confirmation = await screen.findByRole('status');
     await waitFor(() => expect(document.activeElement).toBe(confirmation));
     expect(request).toHaveBeenCalledTimes(1);
-    expect(screen.getByText(/you're on the early-access list/i)).toBeTruthy();
+    expect(screen.getByText(/demo request received/i)).toBeTruthy();
   });
 });

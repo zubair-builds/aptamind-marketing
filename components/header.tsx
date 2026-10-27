@@ -33,7 +33,7 @@ export function Header() {
           ))}
         </nav>
         <a className="button button-dark nav-cta" href="#early-access">
-          Request Early Access <ArrowIcon />
+          Book a Demo <ArrowIcon />
         </a>
         <button
           className="menu-button"
@@ -55,7 +55,7 @@ export function Header() {
             </a>
           ))}
           <a className="button button-accent" href="#early-access" onClick={() => setOpen(false)}>
-            Request Early Access <ArrowIcon />
+            Book a Demo <ArrowIcon />
           </a>
         </nav>
       </div>

@@ -4,7 +4,7 @@ import { contactEmail } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Privacy notice',
-  description: 'How the Aptamind early-access website handles personal information.',
+  description: 'How the Aptamind website handles personal information from demo requests.',
   alternates: { canonical: '/privacy' },
 };
 
@@ -21,22 +21,22 @@ export default function Privacy() {
         <p className="section-number">Privacy / Founder review draft</p>
         <h1>Privacy notice</h1>
         <p className="legal-lede">
-          This notice describes the data practices implemented for Aptamind&apos;s pre-launch website. It
+          This notice describes the data practices implemented for Aptamind&apos;s website. It
           should be reviewed by the founder and legal counsel before public deployment.
         </p>
-        <p className="legal-meta">Last updated: 19 October 2026</p>
+        <p className="legal-meta">Last updated: 27 October 2026</p>
         <h2>Information we collect</h2>
         <p>
-          When you request early access, we collect your email address and any role, company, or use-case
+          When you request a demo, we collect your email address and any role, company, or use-case
           details you choose to provide. If you opt in to marketing communications, we record that choice and
           the time it was made. We may also store limited UTM parameters from the page URL so we can
           understand how visitors reached the site.
         </p>
         <h2>How we use it</h2>
         <p>
-          We use this information to review early-access requests, contact potential users or design partners,
+          We use this information to review demo requests, contact potential users or design partners,
           understand areas of interest and, only with your optional consent, send product news and
-          early-access updates.
+          updates.
         </p>
         <h2>Abuse prevention</h2>
         <p>
@@ -46,19 +46,19 @@ export default function Privacy() {
         </p>
         <h2>Storage and retention</h2>
         <p>
-          Early-access data is stored in a dedicated database, separate from Aptamind&apos;s internal
+          Demo request data is stored in a dedicated database, separate from Aptamind&apos;s internal
           intelligence systems. The founder should define and publish a concrete retention period before
-          launch. Until then, information should be kept only as long as needed to run the early-access
+          launch. Until then, information should be kept only as long as needed to run the demo
           programme or meet legal obligations.
         </p>
         <h2>Sharing</h2>
         <p>
-          We do not sell early-access information. Service providers may process information solely to operate
+          We do not sell demo request information. Service providers may process information solely to operate
           the website and its database, subject to appropriate contractual and security terms.
         </p>
         <h2>Your choices</h2>
         <p>
-          You can decline marketing communications without affecting an early-access request. You may ask to
+          You can decline marketing communications without affecting a demo request. You may ask to
           access, correct, or delete your submission, subject to applicable law.
         </p>
         <h2>Contact</h2>

@@ -20,7 +20,7 @@ export function Footer() {
           </div>
           <div>
             <span>Company</span>
-            <a href="#early-access">Early access</a>
+            <a href="#early-access">Book a demo</a>
             {contactEmail && <a href={`mailto:${contactEmail}`}>Contact</a>}
           </div>
         </div>
